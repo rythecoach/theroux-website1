@@ -3,181 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Confidence 101 - Master the Skills for College Success</title>
+    <title>College Confident 101 - Master the Skills for College Success</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
 </head>
 <body>
     <div class="min-h-screen bg-white">
-        <!-- Top Banner -->
-        <div class="bg-blue-800 text-white py-2">
-            <div class="max-w-6xl mx-auto px-4 text-center">
-                <p class="text-sm">
-                    <span class="font-semibold">Free Resource:</span> 
-                    Get The College Success Checklist
-                    <a href="/checklist.html" class="underline ml-2 hover:text-blue-200">Download Now →</a>
-                </p>
+        <!-- Navigation -->
+        <nav class="py-6 bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+                <a href="/" class="text-2xl font-bold text-blue-900">College Confident 101</a>
+                <div class="space-x-6">
+                    <a href="/checklist.html" class="text-gray-700 font-medium hover:text-blue-900">Free Checklist</a>
+                    <a href="/early-access.html" class="bg-blue-900 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-800 transition-colors">
+                        Join Now
+                    </a>
+                </div>
             </div>
-        </div>
+        </nav>
 
         <!-- Hero Section -->
-        <header class="bg-blue-900 text-white py-20">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h1 class="text-4xl font-bold mb-4">Build Unshakable College Confidence</h1>
-                        <p class="text-xl mb-6">A complete course designed to give you the exact strategies, skills, and mindsets needed to thrive in college.</p>
-                        <div class="bg-blue-800 p-4 rounded-lg mb-6 inline-block">
-                            <p class="text-lg font-bold">Launch Date: May 2025</p>
-                        </div>
-                        <button onclick="window.location.href='/early-access.html'" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-gray-100 transition-colors">
-                            Get Early Bird Access
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-                    <div class="bg-blue-800 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-4">Early Bird Offer</h2>
-                        <ul class="space-y-4 mb-6">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                                <span>Complete College Confidence 101 course ($197 value)</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                                <span>2 Live group coaching calls</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                                <span>Lifetime access to all updates</span>
-                            </li>
-                        </ul>
-                        <div class="bg-white p-4 rounded-lg text-blue-900 text-center">
-                            <p class="text-xl font-bold">$97</p>
-                            <p class="text-gray-600">Regular Price: $197</p>
-                            <p class="text-sm mt-2">Limited to first 20 students</p>
-                        </div>
-                    </div>
+        <header class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <h1 class="text-6xl font-extrabold mb-8 leading-tight tracking-tight text-blue-900">Build Unshakable College Confidence</h1>
+                <p class="text-xl mb-12 max-w-3xl mx-auto text-gray-600">A complete course designed to give you the exact strategies, skills, and mindsets needed to thrive in college.</p>
+                <div class="inline-block bg-blue-900 p-2 px-5 rounded-full text-white font-medium mb-12">
+                    Launching May 2025 • Early Bird Access Now Open
+                </div>
+                <div>
+                    <button onclick="window.location.href='/early-access.html'" class="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-800 transition-colors">
+                        Get Early Bird Access
+                    </button>
                 </div>
             </div>
         </header>
-
-        <!-- What You'll Learn -->
-        <section class="py-16">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-6 text-center">This Course Will Transform Your College Experience</h2>
-                <p class="text-xl text-gray-600 mb-12 text-center">Master these four essential areas for college success</p>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Module 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i data-lucide="brain" class="w-12 h-12 text-blue-800 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">College Success Mindset</h3>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Understanding College Expectations</li>
-                            <li>• Building Academic Confidence</li>
-                            <li>• Creating Your Success Vision</li>
-                        </ul>
+        
+        <!-- Feature Callout -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-5xl font-bold mb-20 text-blue-900">This Course Will Transform Your College Experience</h2>
+                
+                <div class="grid md:grid-cols-2 gap-16">
+                    <!-- Module 1 & 2 -->
+                    <div class="bg-white p-12 rounded-xl shadow-sm">
+                        <div class="text-left space-y-12">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-blue-900">College Success Mindset</h3>
+                                <ul class="text-gray-600 space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Understanding College Expectations</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Building Academic Confidence</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Creating Your Success Vision</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-blue-900">Essential College Skills</h3>
+                                <ul class="text-gray-600 space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Time Management That Actually Works</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Study Strategies for Real Results</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Note-Taking & Class Success</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Module 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i data-lucide="book-open" class="w-12 h-12 text-blue-800 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Essential College Skills</h3>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Time Management That Actually Works</li>
-                            <li>• Study Strategies for Real Results</li>
-                            <li>• Note-Taking & Class Success</li>
-                        </ul>
-                    </div>
-
-                    <!-- Module 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i data-lucide="compass" class="w-12 h-12 text-blue-800 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Campus Navigation & Resources</h3>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Making the Most of Office Hours</li>
-                            <li>• Finding & Using Support Services</li>
-                            <li>• Building Your Success Network</li>
-                        </ul>
-                    </div>
-
-                    <!-- Module 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <i data-lucide="heart" class="w-12 h-12 text-blue-800 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-4">Student Life Balance</h3>
-                        <ul class="text-gray-600 space-y-2">
-                            <li>• Managing Stress & Overwhelm</li>
-                            <li>• Creating Healthy Routines</li>
-                            <li>• Building College-Life Balance</li>
-                        </ul>
+                    <!-- Module 3 & 4 -->
+                    <div class="bg-white p-12 rounded-xl shadow-sm">
+                        <div class="text-left space-y-12">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-blue-900">Campus Navigation & Resources</h3>
+                                <ul class="text-gray-600 space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Making the Most of Office Hours</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Finding & Using Support Services</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Building Your Success Network</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-blue-900">Student Life Balance</h3>
+                                <ul class="text-gray-600 space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Managing Stress & Overwhelm</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Creating Healthy Routines</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check" class="w-5 h-5 text-blue-800"></i>
+                                        <span>Building College-Life Balance</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Who This Is For -->
-        <section class="py-16 bg-gray-50">
+        <!-- Who Is This For -->
+        <section class="py-24 bg-white">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-6 text-center">Who This Course Is For</h2>
-                <div class="grid md:grid-cols-3 gap-8 mt-8">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">Incoming College Students</h3>
+                <h2 class="text-5xl font-bold mb-20 text-blue-900 text-center">Who This Course Is For</h2>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
+                            <i data-lucide="graduation-cap" class="w-12 h-12 text-blue-900"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Incoming College Students</h3>
                         <p class="text-gray-600">Start college with confidence, knowing exactly what to expect and how to succeed from day one.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">Current Students</h3>
+                    <div class="text-center">
+                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
+                            <i data-lucide="book-open" class="w-12 h-12 text-blue-900"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Current Students</h3>
                         <p class="text-gray-600">Level up your college experience by learning the strategies top students use to excel academically and socially.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">Transfer Students</h3>
+                    <div class="text-center">
+                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
+                            <i data-lucide="map" class="w-12 h-12 text-blue-900"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Transfer Students</h3>
                         <p class="text-gray-600">Navigate your new campus environment with ease and confidence using proven success strategies.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section class="py-16">
+        <!-- Early Bird Offer -->
+        <section class="py-24 bg-blue-900 text-white">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <img src="/api/placeholder/120/120" alt="Dr. Ryan Theroux" class="w-24 h-24 rounded-full mx-auto mb-6">
-                <h2 class="text-2xl font-bold mb-4">From Dr. Ryan Theroux</h2>
-                <p class="text-gray-600 mb-6">After helping thousands of students succeed in college, I've developed a comprehensive system for college confidence. This course brings together the exact strategies I've seen work time and time again.</p>
+                <h2 class="text-5xl font-bold mb-8">Join Our Founding Class</h2>
+                <p class="text-xl mb-12">Limited time early bird offer for the first 20 students</p>
+                
+                <div class="bg-white text-gray-800 max-w-md mx-auto p-10 rounded-xl">
+                    <div class="flex items-center justify-center gap-4 mb-8">
+                        <div>
+                            <p class="text-3xl font-bold text-blue-900">$97</p>
+                            <p class="text-sm text-gray-500">Early Bird Price</p>
+                        </div>
+                        <div class="h-14 w-px bg-gray-200"></div>
+                        <div>
+                            <p class="text-2xl font-bold text-gray-400 line-through">$197</p>
+                            <p class="text-sm text-gray-500">Regular Price</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="text-left space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                            <span>Complete College Confidence 101 course</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                            <span>2 Live group coaching calls</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                            <span>Lifetime access to all future updates</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.location.href='/early-access.html'" class="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold text-lg w-full hover:bg-blue-800 transition-colors">
+                        Get Early Bird Access
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4">Only 20 spots available at this price</p>
+                </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="py-16 bg-blue-900 text-white">
+        <!-- About Section -->
+        <section class="py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Ready to Build Your College Confidence?</h2>
-                <p class="text-xl mb-8">Join our founding class of confident college students today</p>
-                <button onclick="window.location.href='/early-access.html'" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-gray-100 transition-colors">
-                    Get Early Bird Access
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </button>
-                <p class="mt-4">Limited to the first 20 students • Save $100</p>
+                <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="users" class="w-12 h-12 text-blue-900"></i>
+                </div>
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">About College Confident 101</h2>
+                <p class="text-xl text-gray-600 mb-6">"After helping thousands of students succeed in college, we've developed a comprehensive system for college confidence. This course brings together the exact strategies that work time and time again."</p>
             </div>
         </section>
 
         <!-- Free Resource -->
-        <section class="py-16 bg-gray-50">
+        <section class="py-24 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Not Ready to Commit?</h2>
+                <h2 class="text-3xl font-bold mb-4 text-blue-900">Not Ready to Commit?</h2>
                 <p class="text-xl text-gray-600 mb-8">Get our free College Success Checklist</p>
-                <button onclick="window.location.href='/checklist.html'" class="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <button onclick="window.location.href='/checklist.html'" class="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-800 transition-colors">
                     Download Free Checklist
                 </button>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="bg-blue-900 text-white py-8">
+        <footer class="py-16 bg-gray-100">
             <div class="max-w-6xl mx-auto px-4 text-center">
-                <p>© 2025 College Confident 101. All rights reserved.</p>
+                <div class="mb-8">
+                    <p class="text-xl font-bold text-blue-900">College Confident 101</p>
+                </div>
+                <p class="text-gray-600 mb-6">© 2025 College Confident 101. All rights reserved.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-900">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-blue-900">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:contact@collegeconfident101.com" class="text-gray-600 hover:text-blue-900">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                </div>
             </div>
         </footer>
     </div>
