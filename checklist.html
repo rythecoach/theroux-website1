@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The College Success Checklist - College Confident 101</title>
+    <title>Free College Success Checklist - College Confident 101</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,103 +17,177 @@
     <div class="min-h-screen bg-white">
         <!-- Navigation -->
         <nav class="py-6 bg-white border-b border-gray-100">
-            <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold text-blue-900">College Confident 101</a>
-                <div class="space-x-6">
-                    <a href="/checklist.html" class="text-gray-700 font-medium hover:text-blue-900">Free Checklist</a>
-                    <a href="/early-access.html" class="bg-blue-900 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-800 transition-colors">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                <a href="/" class="text-2xl font-bold text-amber-600 mb-4 md:mb-0">College Confident 101</a>
+                <div class="flex gap-3 md:gap-6">
+                    <a href="/checklist.html" class="text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 hover:text-amber-600 transition-colors">Free Checklist</a>
+                    <a href="/early-access.html" class="bg-amber-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-amber-700 transition-colors">
                         Join Now
                     </a>
                 </div>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <header class="py-24 bg-blue-900 text-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h1 class="text-5xl font-extrabold mb-8">The College Success Checklist</h1>
-                <p class="text-xl mb-10">21 Things Successful Students Do Differently</p>
-                <div class="max-w-2xl mx-auto bg-blue-800 p-10 rounded-xl">
-                    <ul class="text-left mb-10 space-y-5">
-                        <li class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                            <span class="text-lg">Learn the exact habits that top students use to excel</span>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                            <span class="text-lg">Master time management techniques that reduce stress and improve grades</span>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-300 flex-shrink-0"></i>
-                            <span class="text-lg">Get a proven framework for building college confidence</span>
-                        </li>
-                    </ul>
-                    <!-- Email Signup Form -->
-                    <div class="bg-white p-8 rounded-xl">
-                        <form class="space-y-5">
-                            <input type="email" placeholder="Enter your email" class="w-full px-5 py-4 rounded-full border focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
-                            <button type="submit" class="w-full bg-blue-900 text-white px-6 py-4 rounded-full font-semibold hover:bg-blue-800 transition-colors text-lg">
-                                Get Your Free Checklist
-                            </button>
-                        </form>
-                        <p class="text-gray-600 text-sm mt-4">Join thousands of students already using these strategies</p>
+        <!-- Checklist Hero Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:items-center md:gap-12">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-amber-600 leading-tight">Your Free College Success Checklist</h1>
+                        <p class="text-xl text-gray-600 mb-8">Download our comprehensive checklist to prepare for college success. Start implementing these key strategies today!</p>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                            <h3 class="text-lg font-semibold mb-3 text-amber-600">What's Inside:</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                    <span class="text-gray-600">Essential college preparation tasks</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                    <span class="text-gray-600">Time management strategies</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                    <span class="text-gray-600">Study skills quick-start guide</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                    <span class="text-gray-600">Campus resource finder template</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Card -->
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold mb-6 text-amber-600">Get Your Free Checklist</h2>
+                            <form class="space-y-5">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500" required>
+                                </div>
+                                <div>
+                                    <label for="status" class="block text-sm font-medium text-gray-700 mb-1">Your Current Status</label>
+                                    <select id="status" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                                        <option value="">Select your status</option>
+                                        <option value="high-school">High School Student</option>
+                                        <option value="incoming">Incoming College Student</option>
+                                        <option value="current">Current College Student</option>
+                                        <option value="transfer">Transfer Student</option>
+                                        <option value="parent">Parent</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-amber-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+                                    Download Checklist
+                                </button>
+                                <p class="text-xs text-gray-500 text-center">We'll email you the checklist immediately.</p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <!-- Features -->
-        <section class="py-24 bg-white">
+        <!-- Preview Section -->
+        <section class="py-20 bg-gray-50">
             <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-16 text-blue-900 text-center">What's Inside The Checklist</h2>
-                <div class="grid md:grid-cols-3 gap-12">
-                    <div class="text-center">
-                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
-                            <i data-lucide="target" class="w-12 h-12 text-blue-800"></i>
+                <h2 class="text-3xl font-bold mb-12 text-amber-600 text-center">Checklist Preview</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="bg-amber-100 rounded-full p-2">
+                                <i data-lucide="list-checks" class="w-6 h-6 text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-600">Before the Semester</h3>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Study Strategies</h3>
-                        <p class="text-gray-600">Proven techniques to improve retention and reduce study time</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Review your class schedule and locate buildings</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Set up your study space with essential supplies</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Research campus resources (tutoring, health services)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Create your semester calendar with key dates</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="text-center">
-                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
-                            <i data-lucide="clock" class="w-12 h-12 text-blue-800"></i>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="bg-amber-100 rounded-full p-2">
+                                <i data-lucide="calendar" class="w-6 h-6 text-amber-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-600">First Week Success</h3>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Time Management</h3>
-                        <p class="text-gray-600">Systems that help you balance academics and life</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Review all syllabi and note assignment deadlines</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Introduce yourself to professors during office hours</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Set up your study schedule with dedicated time blocks</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="square" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span class="text-gray-600">Join at least one student organization or club</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="text-center">
-                        <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
-                            <i data-lucide="users" class="w-12 h-12 text-blue-800"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-blue-900">Success Mindsets</h3>
-                        <p class="text-gray-600">Mental frameworks used by top students</p>
-                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-6">Plus many more actionable items to ensure your college success!</p>
+                    <a href="#top" class="text-amber-600 font-semibold hover:underline">Back to form</a>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section class="py-24 bg-gray-50">
+        <!-- Course Promo Section -->
+        <section class="py-20 bg-white">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <div class="rounded-full bg-blue-100 w-24 h-24 flex items-center justify-center mx-auto mb-8">
-                    <i data-lucide="award" class="w-12 h-12 text-blue-900"></i>
+                <h2 class="text-3xl font-bold mb-6 text-amber-600">Want More Than Just a Checklist?</h2>
+                <p class="text-xl text-gray-600 mb-10">The checklist is just the beginning. Our complete College Confident 101 course gives you the full system for college success.</p>
+                
+                <div class="bg-amber-50 p-8 rounded-xl border border-amber-100">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-600">College Confident 101 Course</h3>
+                    <p class="text-gray-600 mb-8">Get the complete system for college success including video lessons, worksheets, and live coaching.</p>
+                    
+                    <div class="flex items-center justify-center gap-6 mb-8">
+                        <div>
+                            <p class="text-3xl font-bold text-amber-600">$97</p>
+                            <p class="text-sm text-gray-500">Early Bird Price</p>
+                        </div>
+                        <div class="h-14 w-px bg-gray-200"></div>
+                        <div>
+                            <p class="text-2xl font-bold text-gray-400 line-through">$197</p>
+                            <p class="text-sm text-gray-500">Regular Price</p>
+                        </div>
+                    </div>
+                    
+                    <button onclick="window.location.href='/early-access.html'" class="bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-700 transition-colors">
+                        Learn More About the Course
+                    </button>
                 </div>
-                <h2 class="text-3xl font-bold mb-6 text-blue-900">About Our Approach</h2>
-                <p class="text-xl text-gray-600 mb-8">After helping thousands of students succeed in college, we've distilled the most important strategies into this essential checklist. These are the exact habits and approaches we've seen work time and time again.</p>
-                <button type="submit" class="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-800 transition-colors">
-                    Get Your Free Checklist
-                </button>
-            </div>
-        </section>
-
-        <!-- Course Callout -->
-        <section class="py-24 bg-blue-900 text-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold mb-8">Want More Comprehensive Guidance?</h2>
-                <p class="text-xl mb-10">Check out our complete College Confidence 101 course</p>
-                <button onclick="window.location.href='/early-access.html'" class="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
-                    Learn More About the Course
-                </button>
             </div>
         </section>
 
@@ -121,17 +195,17 @@
         <footer class="py-16 bg-gray-100">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <div class="mb-8">
-                    <p class="text-xl font-bold text-blue-900">College Confident 101</p>
+                    <p class="text-xl font-bold text-amber-600">College Confident 101</p>
                 </div>
                 <p class="text-gray-600 mb-6">© 2025 College Confident 101. All rights reserved.</p>
                 <div class="flex justify-center space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-blue-900">
+                    <a href="#" class="text-gray-600 hover:text-amber-600">
                         <i data-lucide="instagram" class="w-6 h-6"></i>
                     </a>
-                    <a href="#" class="text-gray-600 hover:text-blue-900">
+                    <a href="#" class="text-gray-600 hover:text-amber-600">
                         <i data-lucide="linkedin" class="w-6 h-6"></i>
                     </a>
-                    <a href="mailto:contact@collegeconfident101.com" class="text-gray-600 hover:text-blue-900">
+                    <a href="mailto:contact@collegeconfident101.com" class="text-gray-600 hover:text-amber-600">
                         <i data-lucide="mail" class="w-6 h-6"></i>
                     </a>
                 </div>
