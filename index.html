@@ -32,11 +32,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366f1', // Indigo
-                        secondary: '#f43f5e', // Rose
-                        accent: '#8b5cf6', // Violet
-                        light: '#f9fafb',
-                        dark: '#1f2937'
+                        primary: '#4f46e5', // Deep blue
+                        secondary: '#14b8a6', // Teal
+                        accent: '#f97316', // Orange
+                        light: '#f8fafc',
+                        dark: '#1e293b'
                     },
                     fontFamily: {
                         'montserrat': ['Montserrat', 'sans-serif'],
@@ -58,11 +58,11 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #14b8a6 100%);
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #f43f5e 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #14b8a6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -141,8 +141,7 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="#modules" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Our Modules</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Testimonials</a>
+                    <a href="#sessions" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Live Sessions</a>
                     <a href="#pricing" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Pricing</a>
                     <a href="#faq" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">FAQ</a>
                     <a href="/checklist.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Free Training</a>
@@ -163,8 +162,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#modules" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Our Modules</a>
-                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Testimonials</a>
+                <a href="#sessions" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Live Sessions</a>
                 <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Pricing</a>
                 <a href="#faq" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">FAQ</a>
                 <a href="/checklist.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Free Training</a>
@@ -197,7 +195,7 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Students in college campus" class="rounded-2xl shadow-2xl hover-scale">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student working on laptop" class="rounded-2xl shadow-2xl hover-scale">
                     </div>
                 </div>
             </div>
@@ -571,16 +569,16 @@
         </section>
 
         <!-- Feature Modules -->
-        <section id="modules" class="py-24 bg-white">
+        <section id="sessions" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-20">
-                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR CURRICULUM</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">This Training Will Help You <span class="gradient-text">Crush</span> Your College Experience.</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">A comprehensive approach focusing on the skills and mindsets that top students use to excel in college.</p>
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR LIVE SESSIONS</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Weekly Live Sessions to <span class="gradient-text">Support</span> Your College Journey</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our expert-led sessions focusing on the skills and mindsets that top students use to excel in college.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-                    <!-- Module 1 -->
+                    <!-- Session 1 -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
@@ -603,11 +601,14 @@
                                         <span>Creating Your Success Vision</span>
                                     </li>
                                 </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Every Monday at 7:00 PM EST</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Module 2 -->
+                    <!-- Session 2 -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-accent">
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 bg-accent/10 p-3 rounded-xl">
@@ -630,11 +631,14 @@
                                         <span>Note-Taking & Class Success</span>
                                     </li>
                                 </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-accent font-semibold">Every Wednesday at 7:00 PM EST</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Module 3 -->
+                    <!-- Session 3 -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-secondary">
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 bg-secondary/10 p-3 rounded-xl">
@@ -657,11 +661,14 @@
                                         <span>Building Your Success Network</span>
                                     </li>
                                 </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-secondary font-semibold">Every Friday at 6:00 PM EST</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Module 4 -->
+                    <!-- Session 4 -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
@@ -684,9 +691,19 @@
                                         <span>Building College-Life Balance</span>
                                     </li>
                                 </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Every Sunday at 4:00 PM EST</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#pricing" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                        Join Our Live Sessions
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -696,6 +713,37 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-20">
                     <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">IS THIS FOR YOU?</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Who Will Benefit From Our Sessions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We've designed our program to help anyone who wants to excel in their college journey.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="graduation-cap" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Prospective College Students</h3>
+                        <p class="text-gray-600">Start college with confidence, knowing exactly what to expect and how to succeed from day one.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="book-open" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Current Students</h3>
+                        <p class="text-gray-600">Level up your college experience by learning the strategies top students use to excel academically and socially.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Parents</h3>
+                        <p class="text-gray-600">Help your loved one navigate their new college environment by learning supportive strategies to foster a successful transition.</p>
+                    </div>
+                </div>
+            </div>
+        </section> text-primary text-sm font-semibold mb-4">IS THIS FOR YOU?</span>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Who Will Benefit From This Training</h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">We've designed our program to help anyone who wants to excel in their college journey.</p>
                 </div>
