@@ -32,10 +32,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5', // Deep blue
-                        secondary: '#14b8a6', // Teal
-                        accent: '#f97316', // Orange
-                        light: '#f8fafc',
+                        primary: '#f59e0b', // Amber
+                        secondary: '#d97706', // Amber darker
+                        accent: '#fbbf24', // Amber lighter
+                        light: '#f9fafb',
                         dark: '#1e293b'
                     },
                     fontFamily: {
@@ -58,11 +58,11 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #4f46e5 0%, #14b8a6 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #4f46e5 0%, #14b8a6 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -292,13 +292,20 @@
                     
                     <div>
                         <h3 class="text-lg font-bold mb-6">Quick Links</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                            <li><a href="#modules" class="text-gray-400 hover:text-white transition-colors">Our Modules</a></li>
-                            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-                            <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-                            <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                        </ul>
+            <ul class="space-y-3">
+                <li>
+                    <a href="/quick-links" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                </li>
+                <li>
+                    <a href="#sessions" class="text-gray-400 hover:text-white transition-colors">Live Sessions</a>
+                </li>
+                <li>
+                    <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                </li>
+                <li>
+                    <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+                </li>
+            </ul>
                     </div>
                     
                     <div>
