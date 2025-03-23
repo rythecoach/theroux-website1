@@ -25,16 +25,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind and Custom Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f59e0b',
-                        secondary: '#d97706',
-                        accent: '#fbbf24',
+                        primary: '#f59e0b', // Amber
+                        secondary: '#d97706', // Amber darker
+                        accent: '#fbbf24', // Amber lighter
                         light: '#f9fafb',
                         dark: '#1e293b'
                     },
@@ -47,10 +47,6 @@
         }
     </script>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    
-    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -69,7 +65,6 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .card-shadow {
@@ -96,7 +91,7 @@
             left: 0;
             width: 100%;
             height: 30%;
-            background-color: rgba(245, 158, 11, 0.2);
+            background-color: rgba(99, 102, 241, 0.2);
             z-index: -1;
         }
         
@@ -119,16 +114,19 @@
         
         /* Mobile Menu */
         .mobile-menu {
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
         
         .mobile-menu.hidden {
-            display: none;
+            transform: translateX(-100%);
         }
     </style>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body class="bg-white">
-    <!-- Skip to content for accessibility -->
+    <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:z-50">Skip to main content</a>
 
     <!-- Navigation -->
@@ -155,9 +153,7 @@
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center md:hidden">
                     <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-primary" aria-label="Toggle menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                        <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
@@ -177,7 +173,7 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Hero Section with Animated Background -->
         <section class="pt-32 pb-24 overflow-hidden relative bg-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center">
@@ -190,15 +186,11 @@
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="/early-access.html" class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200 flex items-center justify-center">
                                 <span>Enroll Now</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
+                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                             </a>
-                            <a href="#sessions" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center">
+                            <a href="#modules" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center">
                                 <span>Learn More</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 bounce" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
+                                <i data-lucide="chevron-down" class="w-5 h-5 ml-2 bounce"></i>
                             </a>
                         </div>
                     </div>
@@ -213,10 +205,631 @@
             <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-50"></div>
         </section>
 
-        <!-- Rest of the sections - Feature Modules, Pricing, FAQ, Trusted By, Free Resource, Email Signup, About sections -->
-        [The rest of the original HTML content would go here - each section exactly as it was in the original file]
+        <!-- Free Resource -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">FREE TRAINING</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Not Ready to Commit?</h2>
+                        <p class="text-xl text-gray-600 mb-8">Start with our free training on "The Top 3 Reasons Why Students Struggle in College" and learn actionable strategies you can implement today.</p>
+                        <a href="/checklist.html" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                            Register for Free Training
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </a>
+                    </div>
+                                            <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student studying at desk" class="rounded-2xl shadow-xl hover-scale">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Email Signup -->
+        <section class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gray-50 rounded-2xl p-12 text-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">STAY UPDATED</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Get Weekly College Success Tips</h2>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Join our newsletter and receive proven strategies, tips, and insights to excel in college, delivered directly to your inbox.</p>
+                    
+                    <form class="max-w-md mx-auto">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-md whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">We respect your privacy and will never share your information.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="College lecture hall" class="rounded-2xl shadow-xl">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">About College Confident 101</h2>
+                        <p class="text-lg text-gray-600 mb-6">"After helping thousands of students succeed in college, we've developed a training focused on building college confidence. This training brings together the essential strategies that work time and time again."</p>
+                        <p class="text-lg text-gray-600 mb-8">We believe that every student deserves to thrive in college, not just survive. Our mission is to equip students with the tools, strategies, and mindsets they need to navigate college successfully and make the most of this transformative time in their lives.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
+                            Learn More About Our Team
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-20 pb-10 bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-16">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 gradient-text">College Confident 101</h3>
+                        <p class="text-gray-400 mb-6">Empowering students with the mindsets and skills needed to excel in college and beyond.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                                <i data-lucide="twitter" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+                                <i data-lucide="youtube" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+                <li>
+                    <a href="/quick-links" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                </li>
+                <li>
+                    <a href="#sessions" class="text-gray-400 hover:text-white transition-colors">Live Sessions</a>
+                </li>
+                <li>
+                    <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                </li>
+                <li>
+                    <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+                </li>
+            </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Resources</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Free Training</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Success Stories</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Study Tips</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">College Resources</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-400">
+                                <i data-lucide="mail" class="w-5 h-5 mr-3 text-gray-500"></i>
+                                <a href="mailto:contact@collegeconfident101.com" class="hover:text-white transition-colors">contact@collegeconfident101.com</a>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i data-lucide="phone" class="w-5 h-5 mr-3 text-gray-500"></i>
+                                <a href="tel:+18001234567" class="hover:text-white transition-colors">(800) 123-4567</a>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-500"></i>
+                                <span>New York, NY</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 College Confident 101. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50" aria-label="Back to top">
+            <i data-lucide="chevron-up" class="w-6 h-6"></i>
+        </a>
     </main>
 
-    <!-- Back to Top Button, JavaScript, and closing body/html tags would remain the same -->
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Add Google Analytics
+        /*
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        */
+    </script>
 </body>
 </html>
+
+        <!-- Trusted By Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-gray-500 font-medium mb-8">TRUSTED BY STUDENTS FROM</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Harvard_shield_wreath.svg/1200px-Harvard_shield_wreath.svg.png" alt="Harvard University" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Stanford_Cardinal_logo.svg/1200px-Stanford_Cardinal_logo.svg.png" alt="Stanford University" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1200px-MIT_logo.svg.png" alt="MIT" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Berkeley_Seal.svg/1200px-Berkeley_Seal.svg.png" alt="UC Berkeley" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/University_of_Michigan_logo.svg/1200px-University_of_Michigan_logo.svg.png" alt="University of Michigan" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/University_of_Texas_at_Austin_seal.svg/1200px-University_of_Texas_at_Austin_seal.svg.png" alt="University of Texas" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+                
+                <!-- View More Button -->
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
+                        View More Success Stories
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-24 gradient-bg text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white text-sm font-semibold mb-4">SPECIAL OFFER</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Limited-Time Special Pricing</h2>
+                    <p class="text-xl text-white/80 max-w-3xl mx-auto">Invest in your college success today and unlock your full potential.</p>
+                </div>
+                
+                <div class="max-w-xl mx-auto">
+                    <div class="bg-white text-gray-800 rounded-2xl shadow-xl p-10 hover-scale">
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl font-bold text-dark mb-2">College Confident 101</h3>
+                            <p class="text-gray-500">Complete Training Program</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-center gap-4 mb-8">
+                            <div>
+                                <p class="text-4xl font-bold text-primary">$297</p>
+                                <p class="text-sm text-gray-500">Special Price</p>
+                            </div>
+                            <div class="h-14 w-px bg-gray-200"></div>
+                            <div>
+                                <p class="text-2xl font-bold text-gray-400 line-through">$497</p>
+                                <p class="text-sm text-gray-500">Regular Price</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span>Complete College Confident 101 training</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span>Lifetime access to all materials</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span>Live Training Session</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span>Study Planner Templates</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <span>Access to all future updates</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="/early-access.html" class="block gradient-bg text-white text-center px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                            Enroll Now
+                        </a>
+                        
+                        <div class="text-center mt-6">
+                            <p class="text-gray-500 text-sm mb-2">30-Day Money-Back Guarantee</p>
+                            <div class="flex items-center justify-center gap-3">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visa.svg" alt="Visa" class="h-8 opacity-70">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mastercard.svg" alt="Mastercard" class="h-8 opacity-70">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paypal.svg" alt="PayPal" class="h-8 opacity-70">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepay.svg" alt="Apple Pay" class="h-8 opacity-70">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background decorations -->
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div class="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full"></div>
+                <div class="absolute bottom-10 right-10 w-60 h-60 bg-white/5 rounded-full"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">QUESTIONS</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Find answers to common questions about the College Confident 101 program.</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 hover-scale">
+                        <h3 class="text-xl font-bold mb-3 text-dark">How long do I have access to the training?</h3>
+                        <p class="text-gray-600">You'll have lifetime access to all course materials and any future updates we make to the program. Learn at your own pace and revisit modules whenever you need a refresher.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 hover-scale">
+                        <h3 class="text-xl font-bold mb-3 text-dark">Is this only for incoming freshmen?</h3>
+                        <p class="text-gray-600">Not at all! While the program is excellent for new students, we have many sophomores, juniors, and even seniors who benefit from the training. It's never too late to improve your college skills and mindset.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 hover-scale">
+                        <h3 class="text-xl font-bold mb-3 text-dark">How is this different from what my college orientation provides?</h3>
+                        <p class="text-gray-600">College orientations typically cover basic logistics and campus information. Our program dives deep into the practical skills, mindsets, and strategies for academic success that most orientations simply don't have time to address.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 hover-scale">
+                        <h3 class="text-xl font-bold mb-3 text-dark">Do you offer a money-back guarantee?</h3>
+                        <p class="text-gray-600">Yes! We offer a 30-day, no-questions-asked money-back guarantee. If you don't find the program valuable, simply email us within 30 days of purchase for a full refund.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 hover-scale">
+                        <h3 class="text-xl font-bold mb-3 text-dark">How much time does the training take to complete?</h3>
+                        <p class="text-gray-600">The core program can be completed in about 8-10 hours. However, we recommend spreading it out over 2-4 weeks to allow time to implement the strategies and reflect on your progress.</p>
+                    </div>
+                </div>
+                
+                <!-- More Questions -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-6">Have more questions? We're here to help!</p>
+                    <a href="mailto:contact@collegeconfident101.com" class="inline-flex items-center text-primary font-semibold hover:underline">
+                        Contact Us
+                        <i data-lucide="mail" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Modules -->
+        <section id="sessions" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR LIVE SESSIONS</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Weekly Live Sessions to <span class="gradient-text">Support</span> Your College Journey</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our expert-led sessions focusing on the skills and mindsets that top students use to excel in college.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Session 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
+                                <i data-lucide="brain" class="w-8 h-8 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">College Success Mindset</h3>
+                                <p class="text-gray-600 mb-6">Develop the mental frameworks that top-performing students use to navigate college challenges.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Understanding College Expectations</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Building Academic Confidence</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Creating Your Success Vision</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Every Monday at 7:00 PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-accent">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-accent/10 p-3 rounded-xl">
+                                <i data-lucide="clock" class="w-8 h-8 text-accent"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Essential College Skills</h3>
+                                <p class="text-gray-600 mb-6">Master the practical skills that will help you manage your workload and maximize your learning.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Time Management That Actually Works</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Study Strategies for Real Results</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Note-Taking & Class Success</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-accent font-semibold">Every Wednesday at 7:00 PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-secondary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-secondary/10 p-3 rounded-xl">
+                                <i data-lucide="map" class="w-8 h-8 text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Campus Navigation & Resources</h3>
+                                <p class="text-gray-600 mb-6">Learn how to identify and leverage the often-underutilized resources available on your campus.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Making the Most of Office Hours</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Finding & Using Support Services</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Building Your Success Network</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-secondary font-semibold">Every Friday at 6:00 PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
+                                <i data-lucide="heart-pulse" class="w-8 h-8 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Student Life Balance</h3>
+                                <p class="text-gray-600 mb-6">Develop strategies to maintain your well-being while excelling academically and socially.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Managing Stress & Overwhelm</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Creating Healthy Routines</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                        <span>Building College-Life Balance</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Every Sunday at 4:00 PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#pricing" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                        Join Our Live Sessions
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who Is This For -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">IS THIS FOR YOU?</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Who Will Benefit From Our Sessions</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We've designed our program to help anyone who wants to excel in their college journey.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="graduation-cap" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Prospective College Students</h3>
+                        <p class="text-gray-600">Start college with confidence, knowing exactly what to expect and how to succeed from day one.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="book-open" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Current Students</h3>
+                        <p class="text-gray-600">Level up your college experience by learning the strategies top students use to excel academically and socially.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Parents</h3>
+                        <p class="text-gray-600">Help your loved one navigate their new college environment by learning supportive strategies to foster a successful transition.</p>
+                    </div>
+                </div>
+            </div>
+        </section> text-primary text-sm font-semibold mb-4">IS THIS FOR YOU?</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Who Will Benefit From This Training</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We've designed our program to help anyone who wants to excel in their college journey.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="graduation-cap" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Prospective College Students</h3>
+                        <p class="text-gray-600">Start college with confidence, knowing exactly what to expect and how to succeed from day one.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="book-open" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Current Students</h3>
+                        <p class="text-gray-600">Level up your college experience by learning the strategies top students use to excel academically and socially.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-dark">Parents</h3>
+                        <p class="text-gray-600">Help your loved one navigate their new college environment by learning supportive strategies to foster a successful transition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">SUCCESS STORIES</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">What Our Students Say</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it. Hear from students who've transformed their college experience.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"This program completely changed how I approached my first semester. The time management strategies alone saved me countless hours of stress and helped me balance my coursework with social activities."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah M." class="w-12 h-12 rounded-full">
+                            <div class="ml-4">
+                                <p class="font-bold">Sarah M.</p>
+                                <p class="text-sm text-gray-500">Freshman, NYU</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"I was struggling with imposter syndrome until I took this training. The mindset modules helped me realize I belonged at my university. My grades improved and I even joined two campus organizations."</p>
+                        <div class="flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jason K." class="w-12 h-12 rounded-full">
+                            <div class="ml-4">
+                                <p class="font-bold">Jason K.</p>
+                                <p class="text-sm text-gray-500">Sophomore, UC Berkeley</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic">"As a parent, I wanted to support my daughter through her transition to college. This program gave me insights into what she was experiencing and how I could best support her without overstepping."
