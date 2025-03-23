@@ -25,16 +25,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind and Custom Styles -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f59e0b', // Amber
-                        secondary: '#d97706', // Amber darker
-                        accent: '#fbbf24', // Amber lighter
+                        primary: '#f59e0b',
+                        secondary: '#d97706',
+                        accent: '#fbbf24',
                         light: '#f9fafb',
                         dark: '#1e293b'
                     },
@@ -47,6 +47,10 @@
         }
     </script>
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -65,6 +69,7 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .card-shadow {
@@ -91,7 +96,7 @@
             left: 0;
             width: 100%;
             height: 30%;
-            background-color: rgba(99, 102, 241, 0.2);
+            background-color: rgba(245, 158, 11, 0.2);
             z-index: -1;
         }
         
@@ -114,19 +119,16 @@
         
         /* Mobile Menu */
         .mobile-menu {
-            transition: transform 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         
         .mobile-menu.hidden {
-            transform: translateX(-100%);
+            display: none;
         }
     </style>
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body class="bg-white">
-    <!-- Skip to content link for accessibility -->
+    <!-- Skip to content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:z-50">Skip to main content</a>
 
     <!-- Navigation -->
@@ -153,7 +155,142 @@
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center md:hidden">
                     <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-primary" aria-label="Toggle menu">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                            </li>
+                            <li>
+                                <a href="#sessions" class="text-gray-400 hover:text-white transition-colors">Live Sessions</a>
+                            </li>
+                            <li>
+                                <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Resources</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Free Training</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Study Tips</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">College Resources</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <a href="mailto:contact@collegeconfident101.com" class="hover:text-white transition-colors">contact@collegeconfident101.com</a>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <a href="tel:+18001234567" class="hover:text-white transition-colors">(800) 123-4567</a>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>New York, NY</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 College Confident 101. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Back to Top Button -->
+        <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50" aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </a>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+        
+        // Add Google Analytics (commented out for now)
+        /*
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        */
+    </script>
+</body>
+</html> stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -173,7 +310,7 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section with Animated Background -->
+        <!-- Hero Section -->
         <section class="pt-32 pb-24 overflow-hidden relative bg-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center">
@@ -186,11 +323,15 @@
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="/early-access.html" class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200 flex items-center justify-center">
                                 <span>Enroll Now</span>
-                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
                             </a>
-                            <a href="#modules" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center">
+                            <a href="#sessions" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center">
                                 <span>Learn More</span>
-                                <i data-lucide="chevron-down" class="w-5 h-5 ml-2 bounce"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 bounce" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -203,429 +344,6 @@
             <!-- Background decorations -->
             <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
             <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-50"></div>
-        </section>
-
-        <!-- Trusted By Section -->
-        <section class="py-12 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-gray-500 font-medium mb-8">TRUSTED BY STUDENTS FROM</p>
-                                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-1.png" alt="University Logo 1" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-2.png" alt="University Logo 2" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-3.png" alt="University Logo 3" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-4.png" alt="University Logo 4" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-5.png" alt="University Logo 5" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <img src="/images/university-logo-6.png" alt="University Logo 6" class="h-12 opacity-70 hover:opacity-100 transition-opacity">
-                        </div>
-                    </div>
-                
-                <!-- View More Button -->
-                <div class="text-center mt-12">
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        View More Success Stories
-                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Free Resource -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">FREE TRAINING</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Not Ready to Commit?</h2>
-                        <p class="text-xl text-gray-600 mb-8">Start with our free training on "The Top 3 Reasons Why Students Struggle in College" and learn actionable strategies you can implement today.</p>
-                        <a href="/checklist.html" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
-                            Register for Free Training
-                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                        </a>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student studying at desk" class="rounded-2xl shadow-xl hover-scale">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Email Signup -->
-        <section class="py-24 bg-white">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-gray-50 rounded-2xl p-12 text-center">
-                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">STAY UPDATED</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Get Weekly College Success Tips</h2>
-                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Join our newsletter and receive strategies, tips, and insights to excel in college.</p>
-                    
-                    <form class="max-w-md mx-auto">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                            <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-md whitespace-nowrap">
-                                Subscribe
-                            </button>
-                        </div>
-                        <p class="text-sm text-gray-500 mt-4">We respect your privacy and will never share your information.</p>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-        <!-- About Section -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="College lecture hall" class="rounded-2xl shadow-xl">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR STORY</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">About College Confident 101</h2>
-                        <p class="text-lg text-gray-600 mb-6">"After years of helping students succeed in college, we've developed this training focused on building college confidence. Our sessions bring together essential strategies that work."</p>
-                        <p class="text-lg text-gray-600 mb-8">We believe that every student deserves to thrive in college, not just survive. Our mission is to equip students with the tools, strategies, and mindsets they need to navigate college successfully.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                            Learn More About Our Team
-                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Feature Modules -->
-        <section id="sessions" class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-20">
-                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR LIVE SESSIONS</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Weekly Live Sessions to <span class="gradient-text">Support</span> Your College Journey</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our expert-led sessions focusing on essential skills and mindsets for college success.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-                    <!-- Session 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
-                                <i data-lucide="brain" class="w-8 h-8 text-primary"></i>
-                            </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-bold mb-6">Resources</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Free Training</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Study Tips</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">College Resources</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-bold mb-6">Contact Us</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-400">
-                                <i data-lucide="mail" class="w-5 h-5 mr-3 text-gray-500"></i>
-                                <a href="mailto:contact@collegeconfident101.com" class="hover:text-white transition-colors">contact@collegeconfident101.com</a>
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i data-lucide="phone" class="w-5 h-5 mr-3 text-gray-500"></i>
-                                <a href="tel:+18001234567" class="hover:text-white transition-colors">(800) 123-4567</a>
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-500"></i>
-                                <span>New York, NY</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 College Confident 101. All rights reserved.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50" aria-label="Back to top">
-            <i data-lucide="chevron-up" class="w-6 h-6"></i>
-        </a>
-    </main>
-
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.add('opacity-0', 'invisible');
-                backToTopButton.classList.remove('opacity-100', 'visible');
-            }
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
-        
-        // Initialize Lucide icons
-        lucide.createIcons();
-        
-        // Add Google Analytics
-        /*
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-        */
-    </script>
-</body>
-</html>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-4 text-dark">College Success Mindset</h3>
-                                <p class="text-gray-600 mb-6">Develop mental frameworks to navigate college challenges.</p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Understanding College Expectations</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Building Academic Confidence</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Creating Your Success Vision</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-6 pt-6 border-t border-gray-100">
-                                    <p class="text-primary font-semibold">Live Session</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Session 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-accent">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 bg-accent/10 p-3 rounded-xl">
-                                <i data-lucide="clock" class="w-8 h-8 text-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-4 text-dark">Essential College Skills</h3>
-                                <p class="text-gray-600 mb-6">Our approach focuses on practical strategies to manage your workload and maximize learning.</p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Time Management That Actually Works</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Study Strategies for Real Results</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Note-Taking & Class Success</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-6 pt-6 border-t border-gray-100">
-                                    <p class="text-accent font-semibold">Live Session</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Session 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-secondary">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 bg-secondary/10 p-3 rounded-xl">
-                                <i data-lucide="map" class="w-8 h-8 text-secondary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-4 text-dark">Campus Navigation & Resources</h3>
-                                <p class="text-gray-600 mb-6">Learn to identify and leverage resources available on your campus.</p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Making the Most of Office Hours</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Finding & Using Support Services</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Building Your Success Network</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-6 pt-6 border-t border-gray-100">
-                                    <p class="text-secondary font-semibold">Live Session</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Session 4 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
-                                <i data-lucide="heart-pulse" class="w-8 h-8 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-4 text-dark">Student Life Balance</h3>
-                                <p class="text-gray-600 mb-6">Develop strategies to maintain well-being while excelling academically.</p>
-                                <ul class="space-y-3">
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Managing Stress & Overwhelm</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Creating Healthy Routines</span>
-                                    </li>
-                                    <li class="flex items-center gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                                        <span>Building College-Life Balance</span>
-                                    </li>
-                                </ul>
-                                <div class="mt-6 pt-6 border-t border-gray-100">
-                                    <p class="text-primary font-semibold">Live Session</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="#pricing" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
-                        Join Our Live Sessions
-                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Who Is This For -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-20">
-                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">IS THIS FOR YOU?</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Who Will Benefit From This Training</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">We've designed our program to help anyone who wants to excel in their college journey.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
-                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-dark">Parents</h3>
-                        <p class="text-gray-600">Help your loved one navigate their new college environment by learning supportive strategies to foster a successful transition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-20">
-                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">SUCCESS STORIES</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">What Our Students Say</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it. Hear from students who've transformed their college experience.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
-                        <div class="flex text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"This program completely changed how I approached my first semester. The time management strategies alone saved me countless hours of stress and helped me balance my coursework with social activities."</p>
-                        <div class="flex items-center">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah M." class="w-12 h-12 rounded-full">
-                            <div class="ml-4">
-                                <p class="font-bold">Sarah M.</p>
-                                <p class="text-sm text-gray-500">Freshman, NYU</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
-                        <div class="flex text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"I was struggling with imposter syndrome until I took this training. The mindset modules helped me realize I belonged at my university. My grades improved and I even joined two campus organizations."</p>
-                        <div class="flex items-center">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jason K." class="w-12 h-12 rounded-full">
-                            <div class="ml-4">
-                                <p class="font-bold">Jason K.</p>
-                                <p class="text-sm text-gray-500">Sophomore, UC Berkeley</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale">
-                        <div class="flex text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        </div>
-                        <p class="text-gray-600 mb-6 italic">"As a parent, I wanted to support my daughter through her transition to college. This program gave me insights into what she was experiencing and how I could best support her without overstepping."</p>
-                        <div class="flex items-center">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Linda P." class="w-12 h-12 rounded-full">
-                            <div class="ml-4">
-                                <p class="font-bold">Linda P.</p>
-                                <p class="text-sm text-gray-500">Parent of Freshman</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         
         <!-- Pricing Section -->
@@ -658,23 +376,33 @@
                         
                         <ul class="space-y-4 mb-10">
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
                                 <span>Complete College Confident 101 training</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
                                 <span>Lifetime access to all materials</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
                                 <span>Live Training Session</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
                                 <span>Study Planner Templates</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 flex-shrink-0"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
                                 <span>Access to all future updates</span>
                             </li>
                         </ul>
@@ -686,10 +414,22 @@
                         <div class="text-center mt-6">
                             <p class="text-gray-500 text-sm mb-2">30-Day Money-Back Guarantee</p>
                             <div class="flex items-center justify-center gap-3">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visa.svg" alt="Visa" class="h-8 opacity-70">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mastercard.svg" alt="Mastercard" class="h-8 opacity-70">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paypal.svg" alt="PayPal" class="h-8 opacity-70">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepay.svg" alt="Apple Pay" class="h-8 opacity-70">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect width="24" height="24" rx="4" fill="#1A1F71"/>
+                                    <path d="M9.5 15.5L14.5 8.5M9.5 8.5L14.5 15.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="12" cy="12" r="12" fill="#EB001B" fill-opacity="0.6"/>
+                                    <circle cx="12" cy="12" r="12" fill="#F79E1B" fill-opacity="0.6"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect width="24" height="24" rx="4" fill="#003087"/>
+                                    <path d="M7 12H17M12 7V17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect width="24" height="24" rx="4" fill="#000000"/>
+                                    <path d="M12 7V17M7 12H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -750,7 +490,10 @@
                     <p class="text-gray-600 mb-6">Have more questions? We're here to help!</p>
                     <a href="mailto:contact@collegeconfident101.com" class="inline-flex items-center text-primary font-semibold hover:underline">
                         Contact Us
-                        <i data-lucide="mail" class="w-4 h-4 ml-2"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -765,50 +508,298 @@
                         <p class="text-gray-400 mb-6">Empowering students with the mindsets and skills needed to excel in college and beyond.</p>
                         <div class="flex space-x-4">
                             <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01M7.5 21h9a3 3 0 003-3V6a3 3 0 00-3-3h-9a3 3 0 00-3 3v12a3 3 0 003 3z" />
+                                </svg>
                             </a>
                             <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
                             </a>
                             <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                                <i data-lucide="twitter" class="w-6 h-6"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l-8 8m8 0L8 8" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" />
+                                </svg>
                             </a>
                             <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
-                                <i data-lucide="youtube" class="w-6 h-6"></i>
-                            </a>
-                        </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+
+        <!-- Trusted By Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-gray-500 font-medium mb-8">TRUSTED BY STUDENTS FROM</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
                     </div>
-                    
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="h-12 w-32 bg-gray-200 rounded opacity-70 hover:opacity-100 transition-opacity"></div>
+                    </div>
+                </div>
+                
+                <!-- View More Button -->
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
+                        View More Success Stories
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Resource -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h3 class="text-lg font-bold mb-6">Quick Links</h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a>
-                            </li>
-                            <li>
-                                <a href="#sessions" class="text-gray-400 hover:text-white transition-colors">Live Sessions</a>
-                            </li>
-                            <li>
-                                <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
-                            </li>
-                        </ul>
+                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">FREE TRAINING</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Not Ready to Commit?</h2>
+                        <p class="text-xl text-gray-600 mb-8">Start with our free training on "The Top 3 Reasons Why Students Struggle in College" and learn actionable strategies you can implement today.</p>
+                        <a href="/checklist.html" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                            Register for Free Training
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
                     </div>
-                            <i data-lucide="graduation-cap" class="w-10 h-10 text-white"></i>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student studying at desk" class="rounded-2xl shadow-xl hover-scale">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Email Signup -->
+        <section class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gray-50 rounded-2xl p-12 text-center">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">STAY UPDATED</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">Get Weekly College Success Tips</h2>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Join our newsletter and receive strategies, tips, and insights to excel in college.</p>
+                    
+                    <form class="max-w-md mx-auto">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-md whitespace-nowrap">
+                                Subscribe
+                            </button>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-dark">Prospective College Students</h3>
-                        <p class="text-gray-600">Start college with confidence, knowing exactly what to expect and how to succeed from day one.</p>
+                        <p class="text-sm text-gray-500 mt-4">We respect your privacy and will never share your information.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="College lecture hall" class="rounded-2xl shadow-xl">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark">About College Confident 101</h2>
+                        <p class="text-lg text-gray-600 mb-6">"After years of helping students succeed in college, we've developed this training focused on building college confidence. Our sessions bring together essential strategies that work."</p>
+                        <p class="text-lg text-gray-600 mb-8">We believe that every student deserves to thrive in college, not just survive. Our mission is to equip students with the tools, strategies, and mindsets they need to navigate college successfully.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
+                            Learn More About Our Team
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Modules -->
+        <section id="sessions" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">OUR LIVE SESSIONS</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark">Weekly Live Sessions to <span class="gradient-text">Support</span> Your College Journey</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our expert-led sessions focusing on essential skills and mindsets for college success.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Session 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">College Success Mindset</h3>
+                                <p class="text-gray-600 mb-6">Develop mental frameworks to navigate college challenges.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Study Strategies for Real Results</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Note-Taking & Class Success</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-accent font-semibold">Live Session</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
-                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                            <i data-lucide="book-open" class="w-10 h-10 text-white"></i>
+                    <!-- Session 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-secondary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-secondary/10 p-3 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Campus Navigation & Resources</h3>
+                                <p class="text-gray-600 mb-6">Learn to identify and leverage resources available on your campus.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Making the Most of Office Hours</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Finding & Using Support Services</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Building Your Success Network</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-secondary font-semibold">Live Session</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-dark">Current Students</h3>
-                        <p class="text-gray-600">Level up your college experience by learning the strategies top students use to excel academically and socially.</p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
-                        <div class="rounded-full gradient-bg w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <!-- Session 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-primary">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Student Life Balance</h3>
+                                <p class="text-gray-600 mb-6">Develop strategies to maintain well-being while excelling academically.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Managing Stress & Overwhelm</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Creating Healthy Routines</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Building College-Life Balance</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Live Session</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#pricing" class="inline-flex items-center gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg transform hover:-translate-y-1 duration-200">
+                        Join Our Live Sessions
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section> 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Understanding College Expectations</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Building Academic Confidence</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Creating Your Success Vision</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-primary font-semibold">Live Session</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border-t-4 border-accent">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-accent/10 p-3 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-dark">Essential College Skills</h3>
+                                <p class="text-gray-600 mb-6">Our approach focuses on practical strategies to manage your workload and maximize learning.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span>Time Management That Actually Works</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1
